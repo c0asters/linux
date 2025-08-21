@@ -57,11 +57,6 @@ jobs:
           name: kernel
           path: artifacts
 
-      - name: Build
-        run: |
-          cd .github/scripts
-          sudo ./build_boot_img.sh
-
       - name: Generate release info
         run: git log -1 --format=%B > changes.txt
 
